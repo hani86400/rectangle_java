@@ -48,6 +48,18 @@ Usage and run
 # To Compile and generate jar file:
 cd ${T_BASE_DIR} && ./run_java_package.sh
 
+This will:
+1- Compile *.java files
+javac -d . -classpath $CLASSPATH *.java
+
+
+2- Generate JAR file
+echo "Main-Class: ${T_MAINCLASS}" > manifest.txt 
+jar  cvfe  RectangleTest.jar ${T_MAINCLASS} ${T_PACKAGE_DIR}/*.class
+
+
+
+
 # To run main class ${T_MAINCLASS}
 java  -DRECT_LENGTH=${T_LENGTH} -DRECT_WIDTH=${T_WIDTH} -classpath $CLASSPATH      ${T_MAINCLASS} 1000 100
 
