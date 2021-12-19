@@ -58,8 +58,12 @@ jar  cvfe  ${T_JAR_FILE} ${T_MAINCLASS} ${T_PACKAGE_DIR}/*.class
 # To run main class ${T_MAINCLASS}
 java  -DRECT_LENGTH=${T_LENGTH} -DRECT_WIDTH=${T_WIDTH} -classpath $CLASSPATH      ${T_MAINCLASS} 1000 100
 
-# To run jar file ${T_JAR_FILE}
+# To run Main Class in jar file ${T_JAR_FILE} 
 java  -DRECT_LENGTH=${T_LENGTH} -DRECT_WIDTH=${T_WIDTH}                       -jar ${T_JAR_FILE}  1000 100
+
+# To run Specific Class in jar file ${T_JAR_FILE} 
+java   -classpath ${T_JAR_FILE} hani.javalab.rectangle.HelloMsgBox
+
 
 EOT
 # [end  ] Usage/Run ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
