@@ -26,16 +26,13 @@ T_WIDTH=11
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # [begin] Compile
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
-cd $T_BASE_DIR
-IS_COMPILED=NO
 javac -d . -classpath $CLASSPATH *.java && IS_COMPILED=YES
 # [end  ] Compile ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 #
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # [begin] Make jar file
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
-echo "Main-Class: ${T_MAINCLASS}" > manifest.txt 
-jar  cvfe  RectangleTest.jar ${T_MAINCLASS} ${T_PACKAGE_DIR}/*.class
+jar  cvfe  ${T_JAR_FILE} ${T_MAINCLASS} ${T_PACKAGE_DIR}/*.class
 # [end  ] Make jar file ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 #
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
@@ -53,10 +50,8 @@ This will:
 javac -d . -classpath $CLASSPATH *.java
 
 
-2- Generate JAR file
-echo "Main-Class: ${T_MAINCLASS}" > manifest.txt 
-jar  cvfe  RectangleTest.jar ${T_MAINCLASS} ${T_PACKAGE_DIR}/*.class
-
+2- Generate JAR file (Entry Point)
+jar  cvfe  ${T_JAR_FILE} ${T_MAINCLASS} ${T_PACKAGE_DIR}/*.class
 
 
 
