@@ -10,5 +10,9 @@ Sample rectangle  java class.
 
 
 #### TODO
-
+##### Set length and width (parsing  XML )
+##### Set length and width ( parsing JSON)
+##### Set length and width (connect to DB mysql)
+##### Set length and width (connect to DB postgres)
+##### Set length and width (connect to DB mongo)
 
