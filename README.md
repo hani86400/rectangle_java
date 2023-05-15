@@ -15,7 +15,9 @@ Sample rectangle  java class.
 ##### Set length and width (connect to DB mysql)
 ##### Set length and width (connect to DB postgres)
 ##### Set length and width (connect to DB mongo)
+
 <br/>
+
 ##### run_java_package.bat (windows)
 ##### using Maven
 ##### using Ant
