@@ -18,7 +18,7 @@ Sample rectangle  java class.
 
 <br/>
 
-##### run_java_package.bat (windows)
+##### java_run_package.bat (windows)
 ##### using Maven
 ##### using Ant
 
