@@ -6,6 +6,7 @@ Sample rectangle  java class.
 ##### Set length and width (Locally)
 ##### Set length and width (command line args )
 ##### Set length and width (command line property)
+##### Set length and width (Environment Variables )
 ##### Set length and width (Ineract with User input)
 
 
