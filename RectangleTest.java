@@ -54,6 +54,25 @@ public class RectangleTest {
     }
     myrectangle.getSetting();
 
+
+    R = "Set length and width (Environment Variable)";
+    myrectangle.setRemark(R);
+    if ( System.getenv("RECTLENGTH") != null && !System.getenv("RECTLENGTH").trim().isEmpty())     {
+      L = Double.parseDouble(System.getenv("RECTLENGTH"));
+      myrectangle.setLength(L);
+    } else {
+      myrectangle.setLength(0.0);
+    }
+    if ( System.getenv("RECTWIDTH") != null && !System.getenv("RECTWIDTH").trim().isEmpty())     {
+
+      W = Double.parseDouble(System.getenv("RECTWIDTH"));
+      myrectangle.setWidth(W);
+    } else {
+      myrectangle.setWidth(0.0);
+    }
+    myrectangle.getSetting();
+
+
     R = "Set length and width (Ineract with User input)";
     System.out.print("Please enter the length of the rectangle: ");
     L = scanL.nextDouble();
